@@ -3,11 +3,12 @@
 .sidebar {
   width: 240px;
   height: 100%;
-  padding-inline: 5px;
+  padding: 5px;
   display: grid;
   grid-auto-rows: auto 1fr auto;
   background: #222;
   position: fixed;
+  top: 0;
 }
 
 .sidebar-info {
