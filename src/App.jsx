@@ -1,35 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="app">
+        <div className="categories">
+          <div className="category"></div>
+          <div className="category"></div>
+          <div className="category"></div>
+          <div className="category"></div>
+          <div className="category"></div>
+        </div>
+        <div className="sub-categories">
+          <div className="sub-category">sub-category</div>
+          <div className="sub-category">sub-category</div>
+          <div className="sub-category">sub-category</div>
+          <div className="sub-category">sub-category</div>
+          <div className="sub-category">sub-category</div>
+          <div className="sub-category">sub-category</div>
+          <div className="sub-category">sub-category</div>
+        </div>
+        <div className="reservoir">
+          <div className="card">
+            <div className="card-image"></div>
+            <div className="card-data"></div>
+          </div>
+          <div className="card">
+            <div className="card-image"></div>
+            <div className="card-data"></div>
+          </div>
+          <div className="card">
+            <div className="card-image"></div>
+            <div className="card-data"></div>
+          </div>
+          <div className="card">
+            <div className="card-image"></div>
+            <div className="card-data"></div>
+          </div>
+          <div className="card">
+            <div className="card-image"></div>
+            <div className="card-data"></div>
+          </div>
+          <div className="card">
+            <div className="card-image"></div>
+            <div className="card-data"></div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
