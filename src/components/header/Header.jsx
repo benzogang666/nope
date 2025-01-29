@@ -3,7 +3,7 @@ import "./Header.css";
 import { useState } from "react";
 import { NavLink } from "react-router";
 
-import { IoMenu, IoSearch } from "react-icons/io5";
+import { LuMenu, LuSearch } from "react-icons/lu";
 
 import Sidebar from "../sidebar/Sidebar";
 
@@ -16,14 +16,14 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <IoMenu onClick={startSidebar} />
+        <LuMenu className="header-guide" onClick={startSidebar} />
 
-        {sidebar && <Sidebar />}
+        {sidebar && <Sidebar close={stopSidebar} />}
 
         <div>NOMERCY</div>
 
         <NavLink to="/nope">
-          <IoSearch />
+          <LuSearch className="header-guide" />
         </NavLink>
       </div>
     </>

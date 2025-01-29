@@ -1,6 +1,6 @@
 import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({ close }) => {
   return (
     <>
       <div className="sidebar">
@@ -13,7 +13,9 @@ const Sidebar = () => {
           <div className="sidebar-section">Вакансии</div>
           <div className="sidebar-section">Чек</div>
         </div>
-        <div className="sidebar-section sidebar-close">close</div>
+        <div className="sidebar-section sidebar-close" onClick={close}>
+          Закрыть
+        </div>
       </div>
     </>
   );
