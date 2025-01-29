@@ -7,6 +7,7 @@
   display: grid;
   grid-auto-rows: auto 1fr auto;
   background: #222;
+  z-index: 1000;
   position: fixed;
   top: 0;
 }

@@ -1,0 +1,24 @@
+.sub-categories {
+  padding: 10px 0;
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  place-content: start;
+  backdrop-filter: blur(5px);
+  overflow-x: scroll;
+  position: sticky;
+  top: -0.1px;
+}
+
+.sub-category {
+  color: #282828;
+  padding: 5px 20px;
+  background: #c9c9c9;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.sub-category.active {
+  color: #fff;
+  background: #282828;
+}

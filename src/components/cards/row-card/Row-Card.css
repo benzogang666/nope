@@ -1,0 +1,65 @@
+.row-cards {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-flow: row;
+  justify-content: center;
+}
+
+.row-card {
+  padding: 5px;
+  display: grid;
+  gap: 10px;
+  grid-auto-columns: auto;
+  grid-auto-rows: 150px 100px;
+  grid-auto-flow: row;
+  background: #e8e8e8;
+  border-radius: 15px;
+}
+
+.rw-c-image {
+  height: 100%;
+  display: grid;
+  place-self: center;
+  border-radius: 15px;
+}
+
+.rw-c-data {
+  display: grid;
+  align-content: space-between;
+}
+
+.rw-c-named {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.rw-c-details {
+  font-size: 13.5px;
+  line-height: 1.5;
+  max-height: calc(1.5em * 2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rw-c-price {
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.rw-c-expenses {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rw-c-counter {
+  display: grid;
+  grid-auto-columns: 25px;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+}

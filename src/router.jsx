@@ -6,15 +6,24 @@ import Menu from "./pages/menu/Menu";
 
 const router = createBrowserRouter([
   {
-    path: "nope",
+    path: "/nope",
     element: <Layout />,
     children: [
       {
         path: "menu",
         element: <Menu />,
       },
+      {
+        path: "menu/:category",
+        element: <Menu />,
+      },
+      {
+        path: "menu/:category/:subcategory",
+        element: <Menu />,
+      },
     ],
   },
 ]);
+
 
 export default router;
