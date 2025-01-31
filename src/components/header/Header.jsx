@@ -22,7 +22,7 @@ const Header = () => {
 
         <div>NOMERCY</div>
 
-        <NavLink to="/nope">
+        <NavLink to="search">
           <LuSearch className="header-guide" />
         </NavLink>
       </div>

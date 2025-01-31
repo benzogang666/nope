@@ -21,7 +21,7 @@ const Cart = () => {
           Dashboard
           <LuTrash2
             size="25px"
-            onClick={() => window.confirm("Очистить корзину?") && clearCart()}
+            onClick={() => confirm("Очистить корзину?") && clearCart()}
           />
         </div>
 

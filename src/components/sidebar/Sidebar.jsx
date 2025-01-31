@@ -13,7 +13,7 @@ const Sidebar = ({ close }) => {
           <NavLink className="sidebar-section" onClick={close} to="">Контакты</NavLink>
           <NavLink className="sidebar-section" onClick={close} to="">Отзывы</NavLink>
           <NavLink className="sidebar-section" onClick={close} to="vacancies">Вакансии</NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="">Чек</NavLink>
+          <NavLink className="sidebar-section" onClick={close} to="check">Чек</NavLink>
         </div>
         <div className="sidebar-section sidebar-close" onClick={close}>
           Закрыть
