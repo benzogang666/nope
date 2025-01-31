@@ -1,10 +1,10 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 
 import Layout from "./layout/Layout";
 
 import Menu from "./pages/menu/Menu";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/nope",
     element: <Layout />,
