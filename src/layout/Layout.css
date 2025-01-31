@@ -1,6 +1,9 @@
 .layout {
   min-height: 100vh;
-  padding: 0 5px;
   display: grid;
   grid-auto-rows: auto 1fr auto;
+}
+
+.layout > div {
+  padding: 0 5px;
 }
