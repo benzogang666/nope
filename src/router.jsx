@@ -4,6 +4,7 @@ import Layout from "./layout/Layout";
 
 import Cart from "./pages/cart/Cart";
 import Check from "./pages/check/Check";
+import Contacts from "./pages/contacts/Contacts";
 import Menu from "./pages/menu/Menu";
 import Search from "./pages/search/Search";
 import Vacancies from "./pages/vacancies/Vacancies";
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "check",
         element: <Check />,
+      },
+      {
+        path: "contacts",
+        element: <Contacts />,
       },
       {
         path: "search",

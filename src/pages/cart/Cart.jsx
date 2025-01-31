@@ -9,7 +9,12 @@ import { NavLink } from "react-router";
 const Cart = () => {
   const { cart, clearCart } = useCart();
 
-  if (!cart.length) return <NavLink className="cart-empty" to="/menu">Перейти в Меню</NavLink>;
+  if (!cart.length)
+    return (
+      <NavLink className="cart-empty" to="/menu">
+        Перейти в Меню
+      </NavLink>
+    );
 
   return (
     <div>
