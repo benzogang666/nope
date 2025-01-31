@@ -13,17 +13,8 @@ const router = createBrowserRouter([
         path: "menu",
         element: <Menu />,
       },
-      {
-        path: "menu/:category",
-        element: <Menu />,
-      },
-      {
-        path: "menu/:category/:subcategory",
-        element: <Menu />,
-      },
     ],
   },
 ]);
-
 
 export default router;
