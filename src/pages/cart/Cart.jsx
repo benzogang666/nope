@@ -15,13 +15,13 @@ const Cart = () => {
     <div>
       <div className="cart">
         <div className="cart-panel">
-          <NavLink to="/check">
+          <NavLink to="check">
             <LuClipboardList size="25px" />
           </NavLink>
           Dashboard
           <LuTrash2
             size="25px"
-            onClick={() => confirm("Очистить корзину?") && clearCart()}
+            onClick={() => window.confirm("Очистить корзину?") && clearCart()}
           />
         </div>
 
