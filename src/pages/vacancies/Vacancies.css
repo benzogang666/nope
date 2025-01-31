@@ -1,0 +1,40 @@
+.vacancies {
+  display: grid;
+  gap: 30px;
+  align-content: start;
+}
+
+.vacancies-conclusive {
+  color: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  background: #282828;
+  border-radius: 15px;
+}
+
+.vacancy-cards {
+  display: grid;
+  gap: 20px;
+  grid-auto-flow: row;
+}
+
+.vacancy-card {
+  display: grid;
+  gap: 10px;
+  grid-auto-columns: 10px auto;
+  grid-auto-rows: 100px;
+  grid-auto-flow: column;
+  border: 1px solid #282828;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.vy-c-status {
+  background: #ff0000;
+}
+
+.vy-c-data {
+  display: grid;
+  align-content: space-around;
+}
