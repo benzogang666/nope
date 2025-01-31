@@ -10,14 +10,12 @@ import MRC from "../../../components/cards/row-card/Row-Card";
 import { LuLayoutGrid, LuLayoutList } from "react-icons/lu";
 
 const Menu_Reservoir = () => {
-  const [view, setView] = useState("row");
+  const [view, setView] = useState("col");
 
   const { category, subcategory } = useParams();
   const menu = useMenu();
 
-  const activeCategory = menu.categories.find(
-    (line) => line.slug === category
-  );
+  const activeCategory = menu.categories.find((line) => line.slug === category);
   const activeSubCategory = activeCategory?.subcategories.find(
     (line) => line.slug === subcategory
   );
