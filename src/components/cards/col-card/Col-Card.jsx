@@ -25,11 +25,9 @@ const Col_Card = ({ round }) => {
                 stopSpecific={stopSpecific}
               />
             )}
-            <img
+            <div
               className="cl-c-image"
-              src={`/src/assets/Pizza/${line.image}`}
               onClick={() => startSpecific(line.id)}
-              alt={line.name}
             />
             <div className="cl-c-data">
               <div className="cl-c-named">{line.name}</div>

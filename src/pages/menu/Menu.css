@@ -58,13 +58,21 @@
 
 .card-data {
   display: grid;
+  justify-items: start;
   align-content: space-between;
 }
 
 .card-details {
   font-size: 13.5px;
   line-height: 1.5;
-  max-height: calc(1.5em * 3);
+  max-height: calc(1.5em * 2);
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.card-price {
+  color: #fff;
+  padding: 5px 20px;
+  background: #222;
+  border-radius: 100px;
 }

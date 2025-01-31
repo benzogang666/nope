@@ -1,6 +1,7 @@
 .layout {
   min-height: 100vh;
   display: grid;
+  gap: 20px;
   grid-auto-rows: auto 1fr auto;
 }
 

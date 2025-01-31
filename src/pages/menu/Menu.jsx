@@ -2,7 +2,7 @@ import "./Menu.css";
 import menu from "../../assets/menu";
 import { useState } from "react";
 
-import col from "../../components/cards/col-card/Col-Card"
+import Col from "../../components/cards/col-card/Col-Card";
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState(menu.categories[0]);
@@ -48,16 +48,7 @@ const Menu = () => {
       </div>
 
       <div className="menu-items">
-        {activeSubcategory.items.map((line) => (
-          <div className="card" key={line.id}>
-            <div className="card-image"></div>
-            <div className="card-data">
-              <div className="card-named">{line.name}</div>
-              <div className="card-details">{line.details}</div>
-              <div className="card-price">{line.price}</div>
-            </div>
-          </div>
-        ))}
+        <Col round={activeSubcategory.items} />
       </div>
     </div>
   );
