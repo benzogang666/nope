@@ -1,7 +1,7 @@
 import "./Menu-Reservoir.css";
 
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import { useMenu } from "../../../contexts/menuContext/MenuContext";
 
 import MCC from "../../../components/cards/col-card/Col-Card";

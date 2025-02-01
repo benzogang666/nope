@@ -4,7 +4,7 @@ import Cart_Reservoir from "./cart-reservoir/Cart-Reservoir";
 
 import { useCart } from "../../contexts/cartContext/CartContext";
 import { LuClipboardList, LuTrash2 } from "react-icons/lu";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 
 const Cart = () => {
   const { cart, clearCart } = useCart();

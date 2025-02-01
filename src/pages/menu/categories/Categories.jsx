@@ -4,7 +4,7 @@ import { useMenu } from "../../../contexts/menuContext/MenuContext";
 
 import { useEffect } from "react";
 
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router";
 
 const Categories = () => {
   const menu = useMenu();

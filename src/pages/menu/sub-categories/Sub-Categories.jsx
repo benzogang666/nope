@@ -1,5 +1,5 @@
 import "./Sub-Categories.css";
-import { NavLink, useParams, useNavigate } from "react-router-dom";
+import { NavLink, useParams, useNavigate } from "react-router";
 import { useEffect } from "react";
 import { useMenu } from "../../../contexts/menuContext/MenuContext";
 

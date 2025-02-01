@@ -1,7 +1,7 @@
 import "./Sidebar.css";
 
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 
 import { LuMenu } from "react-icons/lu";
 
@@ -16,37 +16,37 @@ const Side = () => {
       {isOpenSide && (
         <div className="side-bar">
           <div className="se-br-list">
-            <NavLink className="se-br-navigate" onClick={closeSide} to="/menu">
+            <NavLink className="se-br-navigate" onClick={closeSide} to="menu">
               Меню
             </NavLink>
-            <NavLink className="se-br-navigate" onClick={closeSide} to="/cart">
+            <NavLink className="se-br-navigate" onClick={closeSide} to="cart">
               Корзина
             </NavLink>
             <NavLink
               className="se-br-navigate"
               onClick={closeSide}
-              to="/reviews"
+              to="reviews"
             >
               Отзывы
             </NavLink>
             <NavLink
               className="se-br-navigate"
               onClick={closeSide}
-              to="/contacts"
+              to="contacts"
             >
               Контакты
             </NavLink>
             <NavLink
               className="se-br-navigate"
               onClick={closeSide}
-              to="/vacancies"
+              to="vacancies"
             >
               Вакансии
             </NavLink>
             <NavLink
               className="se-br-navigate"
               onClick={closeSide}
-              to="/check"
+              to="check"
             >
               Чек
             </NavLink>

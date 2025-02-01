@@ -4,7 +4,7 @@ import Header from "../components/header/Header";
 import Nomercy from "../components/nomercy/Nomercy";
 
 import Scroll from "../components/scroll/Scroll"
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 
 const Layout = () => {
   return (
