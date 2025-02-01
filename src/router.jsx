@@ -9,13 +9,15 @@ import Menu from "./pages/menu/Menu";
 import Search from "./pages/search/Search";
 import Vacancies from "./pages/vacancies/Vacancies";
 
+import Core from "./pages/core/Core";
+
 const router = createBrowserRouter([
   {
     path: "nope",
     element: <Layout />,
     children: [
       {
-        path: "nope",
+        path: "menu",
         element: <Menu />,
       },
       {
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "vacancies",
         element: <Vacancies />,
+      },
+      {
+        path: "core",
+        element: <Core />,
       },
     ],
   },

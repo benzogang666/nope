@@ -8,12 +8,27 @@ const Sidebar = ({ close }) => {
       <div className="sidebar">
         <div className="sidebar-info">NOMERCY</div>
         <div className="sidebar-sections">
-          <NavLink className="sidebar-section" onClick={close} to="menu">Меню</NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="cart">Корзина</NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="contacts">Контакты</NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="">Отзывы</NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="vacancies">Вакансии</NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="check">Чек</NavLink>
+          <NavLink className="sidebar-section" onClick={close} to="menu">
+            Меню
+          </NavLink>
+          <NavLink className="sidebar-section" onClick={close} to="cart">
+            Корзина
+          </NavLink>
+          <NavLink className="sidebar-section" onClick={close} to="contacts">
+            Контакты
+          </NavLink>
+          <NavLink className="sidebar-section" onClick={close} to="">
+            Отзывы
+          </NavLink>
+          <NavLink className="sidebar-section" onClick={close} to="vacancies">
+            Вакансии
+          </NavLink>
+          <NavLink className="sidebar-section" onClick={close} to="check">
+            Чек
+          </NavLink>
+          <NavLink className="sidebar-section" onClick={close} to="core">
+            Core
+          </NavLink>
         </div>
         <div className="sidebar-section sidebar-close" onClick={close}>
           Закрыть
