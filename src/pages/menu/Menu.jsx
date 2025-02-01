@@ -2,10 +2,10 @@ import "./Menu.css";
 
 import { useCart } from "../../contexts/cartContext/CartContext";
 
-import Categories from "./Categories/Categories";
+import Categories from "./categories/Categories";
 import Sub_Categories from "./sub-categories/Sub-Categories";
 import Menu_Reservoir from "./menu-reservoir/Menu-Reservoir";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 
 const Menu = () => {
   const { getTotalPrice } = useCart();
