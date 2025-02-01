@@ -1,7 +1,7 @@
 import "./Search.css";
 import { useState } from "react";
 import { useMenu } from "../../contexts/menuContext/MenuContext";
-import SRC from "../../components/cards/col-card/Col-Card";
+import SRC from "../../components/cards/row-card/Row-Card";
 
 const Search = () => {
   const menu = useMenu();
