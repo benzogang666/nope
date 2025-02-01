@@ -10,13 +10,13 @@
   grid-auto-columns: 130px auto;
   grid-auto-rows: 130px;
   grid-auto-flow: column;
+  background: #e8e8e8;
   border-radius: 15px;
 }
 
 .cl-c-image {
   height: 100%;
   border-radius: 15px;
-  border: 1px solid #000;
 }
 
 .cl-c-data {
@@ -46,9 +46,9 @@
 }
 
 .cl-c-price {
-  color: #fff;
+  color: #000;
   padding: 5px 20px;
-  background: #222;
+  border: 1px solid #000;
   border-radius: 100px;
   white-space: nowrap;
 }

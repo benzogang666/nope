@@ -1,5 +1,6 @@
 .nomercy {
-  color: #fff;
+  color: #222;
+  padding-bottom: 10px;
   display: grid;
-  justify-content: center;
+  place-items: center;
 }

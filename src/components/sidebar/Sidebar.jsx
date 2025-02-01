@@ -1,41 +1,63 @@
 import "./Sidebar.css";
 
-import { NavLink } from "react-router";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
-const Sidebar = ({ close }) => {
+import { LuMenu } from "react-icons/lu";
+
+const Side = () => {
+  const [isOpenSide, setIsOpenSide] = useState(false);
+  const openSide = () => setIsOpenSide(true);
+  const closeSide = () => setIsOpenSide(false);
   return (
     <>
-      <div className="sidebar">
-        <div className="sidebar-info">NOMERCY</div>
-        <div className="sidebar-sections">
-          <NavLink className="sidebar-section" onClick={close} to="menu">
-            Меню
-          </NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="cart">
-            Корзина
-          </NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="contacts">
-            Контакты
-          </NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="">
-            Отзывы
-          </NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="vacancies">
-            Вакансии
-          </NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="check">
-            Чек
-          </NavLink>
-          <NavLink className="sidebar-section" onClick={close} to="core">
-            Core
-          </NavLink>
+      <LuMenu size={"22px"} onClick={openSide} />
+
+      {isOpenSide && (
+        <div className="side-bar">
+          <div className="se-br-list">
+            <NavLink className="se-br-navigate" onClick={closeSide} to="/menu">
+              Меню
+            </NavLink>
+            <NavLink className="se-br-navigate" onClick={closeSide} to="/cart">
+              Корзина
+            </NavLink>
+            <NavLink
+              className="se-br-navigate"
+              onClick={closeSide}
+              to="/reviews"
+            >
+              Отзывы
+            </NavLink>
+            <NavLink
+              className="se-br-navigate"
+              onClick={closeSide}
+              to="/contacts"
+            >
+              Контакты
+            </NavLink>
+            <NavLink
+              className="se-br-navigate"
+              onClick={closeSide}
+              to="/vacancies"
+            >
+              Вакансии
+            </NavLink>
+            <NavLink
+              className="se-br-navigate"
+              onClick={closeSide}
+              to="/check"
+            >
+              Чек
+            </NavLink>
+          </div>
+          <div className="se-br-navigate" onClick={closeSide}>
+            close
+          </div>
         </div>
-        <div className="sidebar-section sidebar-close" onClick={close}>
-          Закрыть
-        </div>
-      </div>
+      )}
     </>
   );
 };
 
-export default Sidebar;
+export default Side;

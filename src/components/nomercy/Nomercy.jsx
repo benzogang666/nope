@@ -3,7 +3,7 @@ import "./Nomercy.css";
 const Nomercy = () => {
   return (
     <>
-      <div className="nomercy">nomercy</div>
+      <div className="nomercy">@alikhan_kaiyrbay</div>
     </>
   );
 };

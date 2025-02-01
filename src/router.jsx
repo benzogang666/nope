@@ -1,15 +1,14 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 
 import Layout from "./layout/Layout";
 
+import Menu from "./pages/menu/Menu";
 import Cart from "./pages/cart/Cart";
 import Check from "./pages/check/Check";
-import Contacts from "./pages/contacts/Contacts";
-import Menu from "./pages/menu/Menu";
+import Reviews from "./pages/reviews/Reviews";
 import Search from "./pages/search/Search";
+import Contacts from "./pages/contacts/Contacts";
 import Vacancies from "./pages/vacancies/Vacancies";
-
-import Core from "./pages/core/Core";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +24,14 @@ const router = createBrowserRouter([
         element: <Menu />,
       },
       {
+        path: "menu/:category",
+        element: <Menu />,
+      },
+      {
+        path: "menu/:category/:subcategory",
+        element: <Menu />,
+      },
+      {
         path: "cart",
         element: <Cart />,
       },
@@ -33,20 +40,20 @@ const router = createBrowserRouter([
         element: <Check />,
       },
       {
-        path: "contacts",
-        element: <Contacts />,
+        path: "reviews",
+        element: <Reviews />,
       },
       {
         path: "search",
         element: <Search />,
       },
       {
-        path: "vacancies",
-        element: <Vacancies />,
+        path: "contacts",
+        element: <Contacts />,
       },
       {
-        path: "core",
-        element: <Core />,
+        path: "vacancies",
+        element: <Vacancies />,
       },
     ],
   },

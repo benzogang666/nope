@@ -1,18 +1,19 @@
 import "./Layout.css";
 
 import Header from "../components/header/Header";
-import { Outlet } from "react-router";
 import Nomercy from "../components/nomercy/Nomercy";
+
+import Scroll from "../components/scroll/Scroll"
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <>
       <div className="layout">
         <Header />
-        <div className="main">
-          <Outlet />
-        </div>
+        <Outlet />
         <Nomercy />
+        <Scroll />
       </div>
     </>
   );

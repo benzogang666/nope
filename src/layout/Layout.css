@@ -1,10 +1,12 @@
 .layout {
   min-height: 100vh;
   display: grid;
-  gap: 20px;
+  gap: 10px;
   grid-auto-rows: auto 1fr auto;
 }
 
-.layout > div {
-  padding: 0 5px;
+.layout {
+  > div {
+    padding-inline: 5px;
+  }
 }
