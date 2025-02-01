@@ -1,21 +1,10 @@
 import "./Sub-Categories.css";
-import { NavLink, useParams, useNavigate } from "react-router";
-import { useEffect } from "react";
+import { NavLink, useParams } from "react-router";
 import { useMenu } from "../../../contexts/menuContext/MenuContext";
 
 const Sub_Categories = () => {
   const { category } = useParams();
-  const navigate = useNavigate();
   const menu = useMenu();
-
-  useEffect(() => {
-    if (!category) {
-      const firstCategory = menu.categories[0];
-      navigate(
-        `/menu/${firstCategory.slug}/${firstCategory.subcategories[0].slug}`
-      );
-    }
-  }, [category, menu.categories, navigate]);
 
   const subcategories =
     menu.categories.find((line) => line.slug === category)?.subcategories || [];
