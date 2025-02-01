@@ -1,5 +1,5 @@
 import "./Menu.css";
-import { menu } from "../../contexts/menuContext/MenuContext";
+import menu from "../../assets/menu";
 import { useState } from "react";
 import MCC from "../../components/cards/col-card/Col-Card";
 import MRC from "../../components/cards/row-card/Row-Card";
