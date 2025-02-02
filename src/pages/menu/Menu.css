@@ -19,16 +19,26 @@
 }
 
 .sub-categories {
+  padding: 10px 0;
   display: grid;
   gap: 10px;
   grid-auto-flow: column;
   place-content: start;
+  background: #fff;
+  scrollbar-width: none;
+  position: sticky;
+  top: 0;
 }
 
 .sub-category {
   padding: 5px 20px;
   border: 1px solid #000;
   border-radius: 100px;
+}
+
+.active-sub-category {
+  color: #fff;
+  background: #000;
 }
 
 .subcategory {

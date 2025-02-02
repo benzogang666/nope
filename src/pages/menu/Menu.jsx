@@ -20,9 +20,7 @@ const Menu = () => {
                 setActiveCategory(cat);
                 setActiveSubcategory(cat.subcategories[0]);
               }}
-              className={`category ${
-                activeCategory.slug === cat.slug ? "active-category" : ""
-              }`}
+              className="category"
             >
               {cat.name}
             </div>
@@ -32,9 +30,11 @@ const Menu = () => {
         <div className="sub-categories">
           {activeCategory.subcategories.map((sub) => (
             <div
-              key={sub.slug}
+              className={`sub-category ${
+                activeSubcategory.slug === sub.slug ? "active-sub-category" : ""
+              }`}
               onClick={() => setActiveSubcategory(sub)}
-              className="sub-category"
+              key={sub.slug}
             >
               {sub.name}
             </div>
