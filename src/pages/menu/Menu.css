@@ -1,6 +1,6 @@
 .menu {
   display: grid;
-  gap: 20px;
+  gap: 10px;
 }
 
 .categories {
@@ -48,17 +48,12 @@
 
 .reservoir {
   display: grid;
-  gap: 10px;
+  gap: 20px;
 }
 
 .reservoir-views {
+  font-size: 22px;
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-}
-
-.reservoir-cards {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
 }

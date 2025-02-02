@@ -1,3 +1,5 @@
+import { CartProvider } from "./cartContext/CartContext";
+
 const BuildProviderTree = (providers) =>
   providers.reduceRight(
     (AccProvider, CurrentProvider) =>
@@ -10,6 +12,6 @@ const BuildProviderTree = (providers) =>
     ({ children }) => <>{children}</>
   );
 
-const Providers = BuildProviderTree([]);
+const Providers = BuildProviderTree([CartProvider]);
 
 export default Providers;

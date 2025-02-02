@@ -1,9 +1,13 @@
 import "./Menu.css";
+
 import menu from "../../assets/menu";
+
 import { useState } from "react";
-import RC from "../../components/cards/row-card/Row-Card";
-import CC from "../../components/cards/col-card/Col-Card";
+
 import { LuLayoutGrid, LuLayoutList } from "react-icons/lu";
+
+import CC from "../../components/cards/col-card/Col-Card";
+import RC from "../../components/cards/row-card/Row-Card";
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState(menu.categories[0]);
@@ -17,43 +21,47 @@ const Menu = () => {
     <>
       <div className="menu">
         <div className="categories">
-          {menu.categories.map((cat) => (
+          {menu.categories.map((line) => (
             <div
-              key={cat.slug}
+              key={line.slug}
               onClick={() => {
-                setActiveCategory(cat);
-                setActiveSubcategory(cat.subcategories[0]);
+                setActiveCategory(line);
+                setActiveSubcategory(line.subcategories[0]);
               }}
               className="category"
             >
-              {cat.name}
+              {line.name}
             </div>
           ))}
         </div>
 
         <div className="sub-categories">
-          {activeCategory.subcategories.map((sub) => (
+          {activeCategory.subcategories.map((line) => (
             <div
               className={`sub-category ${
-                activeSubcategory.slug === sub.slug ? "active-sub-category" : ""
+                activeSubcategory.slug === line.slug
+                  ? "active-sub-category"
+                  : ""
               }`}
-              onClick={() => setActiveSubcategory(sub)}
-              key={sub.slug}
+              onClick={() => setActiveSubcategory(line)}
+              key={line.slug}
             >
-              {sub.name}
+              {line.name}
             </div>
           ))}
         </div>
 
         <div className="reservoir">
           <div className="reservoir-views">
-            <LuLayoutList size={"20px"} onClick={() => setView("col")} />
-            <LuLayoutGrid size={"20px"} onClick={() => setView("row")} />
+            <LuLayoutList onClick={() => setView("col")} />
+            <LuLayoutGrid onClick={() => setView("row")} />
           </div>
 
           <div className="reservoir-cards">
-            {activeSubcategory.items.map((line) =>
-              view === "col" ? <CC round={line} /> : <RC round={line} />
+            {view === "col" ? (
+              <CC round={activeSubcategory.items} />
+            ) : (
+              <RC round={activeSubcategory.items} />
             )}
           </div>
         </div>
