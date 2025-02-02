@@ -1,6 +1,6 @@
 .specific_dish {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 10px;
   background: #fff;
   z-index: 1000;
@@ -8,6 +8,15 @@
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.specific-card {
+  min-height: 100%;
+  display: grid;
+  gap: 10px;
+  grid-auto-rows: 50% 1fr auto;
+  align-content: space-between;
+  position: relative;
 }
 
 .specific-dish-close {
@@ -19,16 +28,8 @@
   background: #0000006e;
   border-radius: 100px;
   position: absolute;
-  top: 5px;
-  right: 5px;
-}
-
-.specific-card {
-  min-height: 100%;
-  display: grid;
-  gap: 10px;
-  grid-auto-rows: 50% 1fr auto;
-  align-content: space-between;
+  top: 0;
+  right: 0;
 }
 
 .sc-c-image {
@@ -57,4 +58,10 @@
   place-items: center;
   background: #282828;
   border-radius: 100px;
+}
+
+.sc-c-quantity {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }

@@ -12,10 +12,10 @@ const Specific_Dish = ({ line, isSpecific, stopSpecific }) => {
   return (
     <>
       <div className="specific_dish">
-        <div className="specific-dish-close" onClick={stopSpecific}>
-          <IoClose />
-        </div>
         <div className="specific-card">
+          <div className="specific-dish-close" onClick={stopSpecific}>
+            <IoClose />
+          </div>
           <img className="sc-c-image" />
           <div className="sc-c-data">
             <div className="sc-c-named">{line.name}</div>
