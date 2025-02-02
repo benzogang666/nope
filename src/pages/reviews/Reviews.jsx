@@ -3,13 +3,61 @@ import "./Reviews.css";
 const Reviews = () => {
   return (
     <>
-      <div className="reviews">
-        <div>Оставьте отзывы:</div>
-        <div className="reviews-reservoir">
-          <div className="review">2GIS</div>
-          <div className="review">INSTAGRAM</div>
-          <div className="review">WHATSAPP</div>
-          <div className="review">YANDEX</div>
+      <div className="cards">
+        <div className="card">
+          <div className="card-image"></div>
+          <div className="card-data">
+            <div className="card-named">Ballen</div>
+            <div className="card-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+              cum.
+            </div>
+            <div className="card-price">4 590 T</div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-image"></div>
+          <div className="card-data">
+            <div className="card-named">Ballen</div>
+            <div className="card-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+              cum.
+            </div>
+            <div className="card-price">4 590 T</div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-image"></div>
+          <div className="card-data">
+            <div className="card-named">Ballen</div>
+            <div className="card-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+              cum.
+            </div>
+            <div className="card-price">4 590 T</div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-image"></div>
+          <div className="card-data">
+            <div className="card-named">Ballen</div>
+            <div className="card-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+              cum.
+            </div>
+            <div className="card-price">4 590 T</div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-image"></div>
+          <div className="card-data">
+            <div className="card-named">Ballen</div>
+            <div className="card-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+              cum.
+            </div>
+            <div className="card-price">4 590 T</div>
+          </div>
         </div>
       </div>
     </>

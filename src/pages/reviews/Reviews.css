@@ -1,15 +1,38 @@
-.reviews {
+.cards {
   display: grid;
   gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.reviews-reservoir {
+.card {
+  padding: 5px;
   display: grid;
   gap: 10px;
-  grid-auto-rows: 150px;
-  grid-auto-flow: row;
+  grid-auto-rows: 150px auto;
+  align-content: space-between;
+  border: 1px solid #222;
+  border-radius: 15px;
 }
 
-.review {
-  border: 1px solid #000;
+.card-image {
+  background: #676caf;
+  border-radius: 15px;
+}
+
+.card-data {
+  display: grid;
+  align-content: space-between;
+}
+
+.card-named {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card-details {
+  font-size: 13.5px;
+  line-height: 1.5;
+  max-height: calc(1.5em * 2);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

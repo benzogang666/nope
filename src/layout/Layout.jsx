@@ -3,7 +3,7 @@ import "./Layout.css";
 import Header from "../components/header/Header";
 import Nomercy from "../components/nomercy/Nomercy";
 
-import Scroll from "../components/scroll/Scroll"
+import Scroll from "../components/scroll/Scroll";
 import { Outlet } from "react-router";
 
 const Layout = () => {
@@ -11,7 +11,9 @@ const Layout = () => {
     <>
       <div className="layout">
         <Header />
-        <Outlet />
+        <div className="main">
+          <Outlet />
+        </div>
         <Nomercy />
         <Scroll />
       </div>
