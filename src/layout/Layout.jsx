@@ -1,21 +1,14 @@
 import "./Layout.css";
 
-import Header from "../components/header/Header";
-import Nomercy from "../components/nomercy/Nomercy";
-
-import Scroll from "../components/scroll/Scroll";
-import { Outlet } from "react-router";
+import Menu from "../pages/menu/Menu";
 
 const Layout = () => {
   return (
     <>
       <div className="layout">
-        <Header />
         <div className="main">
-          <Outlet />
+          <Menu />
         </div>
-        <Nomercy />
-        <Scroll />
       </div>
     </>
   );

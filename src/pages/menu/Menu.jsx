@@ -1,62 +1,88 @@
 import "./Menu.css";
+import { useState, useEffect } from "react";
 import menu from "../../assets/menu";
-import { useState } from "react";
-import MCC from "../../components/cards/col-card/Col-Card";
-import MRC from "../../components/cards/row-card/Row-Card";
-import { LuLayoutGrid, LuLayoutList } from "react-icons/lu";
+import RC from "../../components/cards/row-card/Row-Card";
 
 const Menu = () => {
-  const [activeCategory, setActiveCategory] = useState(menu.categories[0]);
-  const [activeSubcategory, setActiveSubcategory] = useState(
-    activeCategory.subcategories[0]
-  );
-  const [view, setView] = useState("row");
+  const [activeCategory, setActiveCategory] = useState(menu.categories[0].slug); // Устанавливаем первую категорию по умолчанию
+  const [activeSubcategory, setActiveSubcategory] = useState(null);
+
+  const handleCategoryChange = (category) => {
+    setActiveCategory(category);
+    setActiveSubcategory(null); // Сброс подкатегории при смене категории
+  };
+
+  const handleSubcategoryChange = (subcategory) => {
+    setActiveSubcategory(subcategory);
+  };
+
+  const handleResetSubcategory = () => {
+    setActiveSubcategory(null); // Сброс подкатегории на "Все"
+  };
+
+  const getFilteredItems = () => {
+    if (!activeCategory) return [];
+    
+    const selectedCategory = menu.categories.find((cat) => cat.slug === activeCategory);
+    if (!selectedCategory) return [];
+    
+    if (!activeSubcategory) {
+      return selectedCategory.subcategories.flatMap((sub) => sub.items);
+    }
+    
+    const selectedSubcategory = selectedCategory.subcategories.find((sub) => sub.slug === activeSubcategory);
+    return selectedSubcategory ? selectedSubcategory.items : [];
+  };
+
+  useEffect(() => {
+    // Если категория выбрана, то выбираем первую подкатегорию (если она есть)
+    if (menu.categories[0] && menu.categories[0].subcategories.length > 0) {
+      setActiveSubcategory(menu.categories[0].subcategories[0].slug);
+    }
+  }, [activeCategory]);
 
   return (
-    <div className="menu-container">
-      <h1 className="menu-title">Меню</h1>
-      <div className="menu-categories">
-        {menu.categories.map((cat) => (
-          <button
-            key={cat.slug}
-            onClick={() => {
-              setActiveCategory(cat);
-              setActiveSubcategory(cat.subcategories[0]);
-            }}
-            className={`category-button ${
-              activeCategory.slug === cat.slug ? "active-category" : ""
-            }`}
+    <div className="menu">
+      <div className="categories">
+        {menu.categories.map((category) => (
+          <div
+            className="category"
+            key={category.slug}
+            onClick={() => handleCategoryChange(category.slug)}
           >
-            {cat.name}
-          </button>
+            {category.name}
+          </div>
         ))}
       </div>
 
-      <div className="menu-subcategories">
-        {activeCategory.subcategories.map((sub) => (
-          <button
-            key={sub.slug}
-            onClick={() => setActiveSubcategory(sub)}
-            className={`subcategory-button ${
-              activeSubcategory.slug === sub.slug ? "active-subcategory" : ""
-            }`}
+      {/* Подкатегории отображаются всегда, даже если выбрана категория */}
+      {activeCategory && (
+        <div className="sub-categories">
+          <div
+            className="sub-category"
+            onClick={handleResetSubcategory}
           >
-            {sub.name}
-          </button>
-        ))}
-      </div>
-
-      <div className="reservoir">
-        <div className="reservoir-view-cards">
-          <LuLayoutList size={"20px"} onClick={() => setView("col")} />
-          <LuLayoutGrid size={"20px"} onClick={() => setView("row")} />
+            Все
+          </div>
+          {menu.categories
+            .find((cat) => cat.slug === activeCategory)
+            .subcategories.map((subcategory) => (
+              <div
+                className="sub-category"
+                key={subcategory.slug}
+                onClick={() => handleSubcategoryChange(subcategory.slug)}
+              >
+                {subcategory.name}
+              </div>
+            ))}
         </div>
+      )}
 
-        {view === "col" ? (
-          <MCC round={activeSubcategory.items} />
-        ) : (
-          <MRC round={items} />
-        )}
+      {/* Карточки с товарами */}
+      <div className="items">
+        {getFilteredItems().map((item) => (
+          <RC round={item} key={item.id} />
+        ))}
       </div>
     </div>
   );
