@@ -2,12 +2,16 @@ import "./Menu.css";
 import menu from "../../assets/menu";
 import { useState } from "react";
 import RC from "../../components/cards/row-card/Row-Card";
+import CC from "../../components/cards/col-card/Col-Card";
+import { LuLayoutGrid, LuLayoutList } from "react-icons/lu";
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState(menu.categories[0]);
   const [activeSubcategory, setActiveSubcategory] = useState(
     activeCategory.subcategories[0]
   );
+
+  const [view, setView] = useState("row");
 
   return (
     <>
@@ -41,10 +45,17 @@ const Menu = () => {
           ))}
         </div>
 
-        <div className="items">
-          {activeSubcategory.items.map((line) => (
-            <RC round={line} />
-          ))}
+        <div className="reservoir">
+          <div className="reservoir-views">
+            <LuLayoutList size={"20px"} onClick={() => setView("col")} />
+            <LuLayoutGrid size={"20px"} onClick={() => setView("row")} />
+          </div>
+
+          <div className="reservoir-cards">
+            {activeSubcategory.items.map((line) =>
+              view === "col" ? <CC round={line} /> : <RC round={line} />
+            )}
+          </div>
         </div>
       </div>
     </>

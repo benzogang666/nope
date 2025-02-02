@@ -46,7 +46,18 @@
   gap: 20px;
 }
 
-.items {
+.reservoir {
+  display: grid;
+  gap: 10px;
+}
+
+.reservoir-views {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+.reservoir-cards {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, 1fr);
